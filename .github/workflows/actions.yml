@@ -13,8 +13,8 @@ jobs:
     - name: Setup Haskell
       uses: actions/setup-haskell@master
       with:
-        ghc-version: 8.6.5
-        cabal-version: 3.0
+        ghc-version: '8.6.5'
+        cabal-version: '3.0'
     - name: Build Shellcheck
       run: |
         cabal v1-install
