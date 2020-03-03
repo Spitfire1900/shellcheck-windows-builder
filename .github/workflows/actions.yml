@@ -11,7 +11,7 @@ jobs:
       with:
         repository: 'koalaman/shellcheck'
     - name: Setup Haskell
-      uses: actions/setup-haskell@v1
+      uses: actions/setup-haskell@master
       with:
         ghc-version: '8.6.5' # Exact version of ghc to use
         cabal-version: '3.0'
