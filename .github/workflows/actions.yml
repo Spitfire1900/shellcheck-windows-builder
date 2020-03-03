@@ -9,7 +9,7 @@ jobs:
     - name: Checkout Shellcheck
       uses: actions/checkout@v2
       with:
-        repository: 'https://github.com/koalaman/shellcheck.git'
+        repository: 'koalaman/shellcheck'
     - name: Setup Haskell
       uses: actions/setup-haskell@v1
       with:
