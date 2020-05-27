@@ -20,4 +20,4 @@ jobs:
         cabal v1-install
     - name: Find Shellcheck
       run: |
-        Get-Command cabal; Get-ChildItem dist; Get-ChildItem dist-newstyle
+        Get-Command cabal; Get-ChildItem -Recurse dist
