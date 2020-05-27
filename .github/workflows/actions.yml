@@ -17,4 +17,7 @@ jobs:
         cabal v1-update
     - name: Build Shellcheck
       run: |
-        cabal v1-install 
+        cabal v1-install
+    - name: Find Shellcheck
+      run: |
+        Get-Command cabal; Get-Command shellcheck; ls
