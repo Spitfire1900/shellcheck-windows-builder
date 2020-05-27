@@ -17,4 +17,4 @@ jobs:
         cabal v1-update
     - name: Build Shellcheck
       run: |
-        cabal v1-install
+        cabal v1-install 
