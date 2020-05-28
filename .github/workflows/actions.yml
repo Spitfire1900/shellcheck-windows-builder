@@ -18,6 +18,6 @@ jobs:
     - name: Build Shellcheck
       run: |
         cabal v1-install --bindir=bin
-    - name: Find Shellcheck
+    - name: Run Shellcheck
       run: |
-        Get-ChildItem -Recurse bin
+        .\bin\shellcheck.exe -h
