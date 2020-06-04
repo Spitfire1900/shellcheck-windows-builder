@@ -39,5 +39,5 @@ jobs:
       with: 
         upload_url: ${{ steps.create_release.outputs.upload_url }}
         asset_path: ./bin/shellcheck.exe
-        name: shellcheck.exe
+        asset_name: shellcheck.exe
         asset_content_type: application/vnd.microsoft.portable-executable
