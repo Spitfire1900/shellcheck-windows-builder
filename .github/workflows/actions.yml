@@ -20,7 +20,7 @@ jobs:
         cabal v1-install --bindir=bin
     - name: Run Shellcheck
       run: |
-        .\bin\shellcheck.exe -h
+        .\bin\shellcheck.exe --help
     - name: Create release
       id: create_release
       uses: actions/create-a-release
