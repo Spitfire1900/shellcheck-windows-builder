@@ -33,7 +33,7 @@ jobs:
           Some stuff that happens
         draft: true
     - name: Publish release asset
-      uses: actions/upload-a-release-asset@v1
+      uses: actions/upload-release-asset@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with: 
