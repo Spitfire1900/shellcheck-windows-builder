@@ -1,6 +1,6 @@
 name: Build Shellcheck
 
-on: [push]
+on: [push, repository_dispatch]
 
 jobs:
   build:
@@ -21,3 +21,23 @@ jobs:
     - name: Run Shellcheck
       run: |
         .\bin\shellcheck.exe -h
+    - name: Create release
+      id: create_release
+      uses: actions/create-a-release
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: master
+        release_name: master
+        body: |
+          Some stuff that happens
+        draft: true
+    - name: Publish release asset
+      uses: actions/upload-a-release-asset
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with: 
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: ./bin/shellcheck.exe
+        name: shellcheck.exe
+        asset_content_type: application/vnd.microsoft.portable-executable
