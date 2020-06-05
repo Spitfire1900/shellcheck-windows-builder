@@ -30,8 +30,7 @@ jobs:
         tag_name: master
         release_name: master
         body: |
-          Some stuff that happens
-        draft: true
+          Some stuff that happens  
     - name: Publish release asset
       uses: actions/upload-release-asset@v1
       env:
